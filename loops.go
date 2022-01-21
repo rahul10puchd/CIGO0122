@@ -21,12 +21,21 @@ func main() {
 	// 	fmt.Println(i)
 	// 	i++
 	// }
-	i := 0
-	for {
-		fmt.Println(i)
-		i++
-		if i >= 3 {
-			break
-		}
+	// i := 0
+	// for {
+	// 	fmt.Println(i)
+	// 	i++
+	// 	if i >= 3 {
+	// 		break
+	// 	}
+	// }
+	nums := []string{"rahul", "kumar"}
+	for _, value := range nums {
+		// if value == "u" {
+		// 	break
+		// }
+		fmt.Println(value)
+
 	}
+	// list:=range 2
 }
