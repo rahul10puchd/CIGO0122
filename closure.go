@@ -27,7 +27,7 @@ func main() {
 	y()
 
 	j := func(x int) int { //nameless function
-		fmt.Println("In a 1st function")
+		fmt.Println("In a 2st function")
 		return 20 + x
 	}(10)
 	fmt.Println(j)
@@ -35,7 +35,8 @@ func main() {
 
 //closure
 func g(getInt func(int) int, u int) {
-	getInt(78)
+	j := getInt(78)
+	fmt.Print(j)
 }
 
 //function is a first class member in golnag
