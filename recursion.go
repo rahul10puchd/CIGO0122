@@ -34,3 +34,5 @@ func fact(number int) int {
 	result := number * fact(number-1)
 	return result
 }
+
+//topics covered - slice, array, string,
