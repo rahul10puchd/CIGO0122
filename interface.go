@@ -5,6 +5,7 @@ import (
 )
 
 type Integer int
+type number int
 
 func (i Integer) print() {
 	fmt.Println(i)
@@ -14,6 +15,7 @@ func (i Integer) CalculateSalary() int {
 }
 
 func main() {
+
 	j := Integer(1009)
 	j.print()
 	// var a int
