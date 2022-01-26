@@ -1,8 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type Integer int
+
+func (i Integer) print() {
+	fmt.Println(i)
+}
+func (i Integer) CalculateSalary() int {
+	return int(i)
+}
 
 func main() {
+	j := Integer(1009)
+	j.print()
 	// var a int
 	// a = 10
 	// a = "10"
@@ -11,16 +24,35 @@ func main() {
 	// pj := PermanentJob{
 	// 	basicpay: 10,
 	// }
+	//pj.CalculateSalary()//10
 	// var sc SalaryCalculator
 	// sc = pj
 	// total := sc.CalculateSalary()
 	// fmt.Println(total)
 
-	var sc SalaryCalculator
-	sc = PermanentJob{
+	pj := PermanentJob{
 		basicpay: 10,
 	}
-	total := sc.CalculateSalary()
+	cj := ContractJob{
+		basicpay: 20,
+	}
+	fj := FreelanceJob{
+		basicpay: 1000,
+	}
+	i := Integer(222)
+
+	sc := []SalaryCalculator{pj, cj, fj, i}
+	// // total := sc.CalculateSalary()
+	// // fmt.Println(total)
+	// // sc.GetJobName()
+	totalIncome(sc)
+
+}
+func totalIncome(sc []SalaryCalculator) {
+	total := 0
+	for _, v := range sc {
+		total = total + v.CalculateSalary()
+	}
 	fmt.Println(total)
 }
 
@@ -44,9 +76,25 @@ func (p PermanentJob) CalculateSalary() int {
 	return p.basicpay
 }
 
-// type ContractJob struct {
-// 	basicpay int
-// }
+func (p PermanentJob) GetJobName() string {
+	return "Permanet Job"
+}
+
+type ContractJob struct {
+	basicpay int
+}
+
+func (c ContractJob) CalculateSalary() int {
+	return c.basicpay
+}
+
+type FreelanceJob struct {
+	basicpay int
+}
+
+func (f FreelanceJob) CalculateSalary() int {
+	return f.basicpay
+}
 
 // var sc SalaryCalculator
 // sc can hold the data of multiple data types which comes with a certain condition
