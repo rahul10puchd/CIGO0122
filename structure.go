@@ -81,4 +81,6 @@ func main() {
 	// }
 
 	// fmt.Println(c)
+	var a [10]int
+	fmt.Println(a)
 }
