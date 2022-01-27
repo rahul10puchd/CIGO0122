@@ -32,6 +32,8 @@ func describe(i interface{}) {
 
 }
 
+//embded interface
+
 func main() {
 	describe("Hello")
 	describe(12)
