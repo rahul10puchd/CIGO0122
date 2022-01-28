@@ -32,3 +32,9 @@ type Salary struct {
 /// if yes, then what is the benefit of this
 //defer
 // panic and recovery
+//syllabus
+//go book
+//recursion assign.
+// tier-1 - 20 -- dsa, language,project
+// tier-3 - apti, math
+//tier-2 -
