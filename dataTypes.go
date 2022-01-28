@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 //main function will be automatically called when you start the application
 func main() {
@@ -27,9 +30,14 @@ func main() {
 	// fmt.Println(name)
 
 	// const pi = 3.14 //implicit typing
-	const pi float32 = 3.14 //explicit typing
-	const l int = 100
-	// l = 10
-	fmt.Println(pi)
-	fmt.Println(l)
+	// const pi float32 = 3.14 //explicit typing
+	// const l int = 100
+	// // l = 10
+	// fmt.Println(reflect.TypeOf(pi))
+	// fmt.Println(l)
+
+	var u rune
+	u = 'a'
+	fmt.Println(u)
+	fmt.Println(reflect.TypeOf(u))
 }
