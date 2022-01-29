@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 /*
 func function_name(){
@@ -36,5 +39,6 @@ func c(w int, name *string) (i int, j string) {
 	j = "rahul"
 	w = 100
 	*name = "code"
+	log.Print("j")
 	return
 }
