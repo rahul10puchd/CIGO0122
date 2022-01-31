@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 	"github.com/rahul10-pu/CIGO0122/database"
+	"github.com/rahul10-pu/CIGO0122/models"
 )
 
 type Handler struct {
@@ -20,6 +21,20 @@ func (h *Handler) GetBooks(in *gin.Context) {
 		in.JSON(http.StatusInternalServerError, err)
 	}
 	in.JSON(http.StatusOK, books)
+}
+func (h *Handler) SaveBook(in *gin.Context) {
+	book := models.Book{}
+	err := in.BindJSON(&book)
+	if err != nil {
+		log.Println(err)
+		in.JSON(http.StatusInternalServerError, err)
+	}
+	err = database.SaveBook(h.DB, &book)
+	if err != nil {
+		log.Println(err)
+		in.JSON(http.StatusInternalServerError, err)
+	}
+	in.JSON(http.StatusOK, book)
 }
 
 /*

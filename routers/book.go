@@ -14,5 +14,6 @@ func Router() *gin.Engine {
 
 	router.GET("/books", api.GetBooks) //set the function for http://localhost:8080/books : Get request
 	//while calling handler function, gin will pass *gin.Context in the handler function
+	router.POST("/books", api.SaveBook)
 	return router
 }

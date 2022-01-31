@@ -16,12 +16,35 @@ func GetBooks(db *gorm.DB) ([]models.Book, error) {
 	}
 	return books, nil
 }
-func GetBookByID(db *gorm.DB, id string) (models.Book, error) {
-	return models.Book{}, nil
+func GetBookByID(db *gorm.DB, id string) (*models.Book, error) {
+	book := models.Book{}
+	err := db.Select("books.*").Group("books.id").Where("books.id= ?", id).First(&book).Error
+	if err != nil {
+		return nil, err
+	}
+	return &book, nil
 }
 func DeleteBookByID(db *gorm.DB, id string) error {
+	var book models.Book
+	err := db.Where("id=?", id).Delete(&book).Error
+	if err != nil {
+		return err
+	}
 	return nil
 }
 func UpdateBookByID(db *gorm.DB, book *models.Book) error {
+	//Save update value in database, if the value doesn't have primary key, will insert it
+	err := db.Save(book).Error //book is with id
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func SaveBook(db *gorm.DB, book *models.Book) error {
+	//Save update value in database, if the value doesn't have primary key, will insert it
+	err := db.Save(book).Error //book here is without id
+	if err != nil {
+		return err
+	}
 	return nil
 }
