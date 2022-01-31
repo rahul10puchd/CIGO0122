@@ -5,6 +5,7 @@ import (
 	"github.com/rahul10-pu/CIGO0122/models"
 )
 
+//GetBooks is creating connection and interacting from golang app to db server via db variable
 func GetBooks(db *gorm.DB) ([]models.Book, error) {
 
 	books := []models.Book{}
