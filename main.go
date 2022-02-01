@@ -1,27 +1,49 @@
 package main
 
 import (
-	"fmt"
+	"encoding/json"
+	"io/ioutil"
 	"log"
-
-	"github.com/rahul10-pu/CIGO0122/database"
-	"github.com/rahul10-pu/CIGO0122/routers"
+	"os"
 )
 
-func init() { //1st
-	database.Setup() //establish the database connection
+type Something struct {
+	Name    string    `json:"name"`
+	Married bool      `json:"married"`
+	Age     float64   `json:"age"`
+	Address []Address `json:"address"`
+	Marks   []int     `json:"marks"`
 }
-func init() { //2nd
-	fmt.Print(1)
+type Address struct {
+	Street int    `json:"street"`
+	City   string `json:"city"`
 }
-func init() { //3nd
-	fmt.Print(2)
-}
-func main() {
 
-	engine := routers.Router()          //get the customized engine
-	err := engine.Run("127.0.0.1:8080") //start the engine
+func main() {
+	jsonFile, err := os.Open("something.json")
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer jsonFile.Close()
+	jsonByteValues, err := ioutil.ReadAll(jsonFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var something Something
+	json.Unmarshal(jsonByteValues, &something) //converting json data to struct
+	log.Println(something)
+	// fmt.Print(string(jsonByteValues)) //converting json data to string
+	// newJsonByteValues, err := json.Marshal(something)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// os.WriteFile("some.json",newJsonByteValues)
+
+	//consuming rest api in go code
+	//using the rest api
+	//returned value ? = json
+	//now you must know how to read the json data
+	// what is the problem if you read json data in string format
+	// read json in strcture format - marshalling , unmarshalling
+
 }
