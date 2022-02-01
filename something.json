@@ -1,0 +1,14 @@
+{
+    "name":"rahul",
+    "married":false,
+    "age":10.9,
+    "address":[{
+        "street":123,
+        "city":"Bangalore"
+    },{
+        "street":324,
+        "city":"Delhi"
+    }
+    ],
+    "marks":[1,2,3,4,56,7,8,4]
+}
