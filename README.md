@@ -12,7 +12,7 @@
 
 5. [Interface](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=6)
 
-6. [Interface, Errors]
+6. [Interface, Errors](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=7)
 
 7. [Defer, Panic, Recovery, Rest API](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=8)
 
@@ -26,5 +26,5 @@
  
 12. [Channel, mutex]
 
-13. [Buffer channel, select, range over channel]
+13. [Buffer channel, select, range over channel](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=16)
 
