@@ -1,6 +1,7 @@
 package database
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/jinzhu/gorm"
@@ -27,4 +28,7 @@ func Setup() {
 	db.AutoMigrate(models.Book{}) // create table automatically in the db
 	DB = db
 
+}
+func exam() {
+	fmt.Print("ddd")
 }
