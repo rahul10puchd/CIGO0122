@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-// type Something struct {
-// 	Name    string    `json:"name"`
-// 	Married bool      `json:"married"`
-// 	Age     float64   `json:"age"`
-// 	Address []Address `json:"address"`
-// 	Marks   []int     `json:"marks"`
-// }
-// type Address struct {
-// 	Street int    `json:"street"`
-// 	City   string `json:"city"`
-// }
+type Something struct {
+	Name    string    `json:"name"`
+	Married bool      `json:"married"`
+	Age     float64   `json:"age"`
+	Address []Address `json:"address"`
+	Marks   []int     `json:"marks"`
+}
+type Address struct {
+	Street int    `json:"street"`
+	City   string `json:"city"`
+}
 
 // func main() {
 // 	jsonFile, err := os.Open("something.json")
