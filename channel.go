@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+/*
 func mainj() {
 	channel := make(chan string, 1)
 	go func(ch chan<- string) {
@@ -33,7 +34,7 @@ func main() {
 	message = <-channel
 	fmt.Println(message)
 }
-
+*/
 // func main() {
 // 	channel := make(chan string, 1)
 // 	go func(ch chan<- string) {
@@ -88,3 +89,25 @@ func main() {
 // 	fmt.Println(message)
 // 	//wait.Wait()
 // }
+func main() {
+	f := make(chan int, 1)
+	var arr [3]int
+	for i := 0; i < 3; i++ {
+		go firstdata(f)
+		arr[i] = <-f
+		time.Sleep(time.Second * 2)
+	}
+	for i := 0; i < 3; i++ {
+		fmt.Println("arr[", i, "] = ", arr[i], "\n")
+	}
+	fmt.Println("final value of counter:=", c)
+
+}
+
+var c int
+
+func firstdata(ch chan<- int) {
+	c += 1
+	ch <- c
+
+}
