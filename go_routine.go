@@ -27,7 +27,7 @@ func add(hint string) {
 	}
 	wait.Done()
 }
-func main() {
+func main32() {
 	counter = 0
 	wait.Add(2)
 	go add("first: ")

@@ -25,7 +25,7 @@ func sendInt(ch chan int) {
 func sendBool(ch chan bool) {
 	ch <- true
 }
-func main() {
+func main321() {
 	ch1 := make(chan int)
 	ch2 := make(chan bool)
 	go sendBool(ch2)

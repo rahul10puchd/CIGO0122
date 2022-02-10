@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func mainj() {
+func mainjs() {
 	channel := make(chan string, 1)
 	go func(ch chan<- string) {
 		ch <- "2"
@@ -17,7 +17,7 @@ func mainj() {
 	time.Sleep(time.Second * 5)
 	fmt.Println(message)
 }
-func main() {
+func mai2n() {
 	channel := make(chan string, 1)
 	go func(ch chan string) {
 		mess := <-ch

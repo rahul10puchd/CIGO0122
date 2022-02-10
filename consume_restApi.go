@@ -21,7 +21,7 @@ type Response struct {
 	} `json:"support"`
 }
 
-func main() {
+func main2() {
 	url := "https://reqres.in/api/products/3"
 	response, err := http.Get(url)
 	if err != nil {
