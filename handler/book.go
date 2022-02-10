@@ -5,14 +5,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 	"github.com/rahul10-pu/CIGO0122/database"
 	"github.com/rahul10-pu/CIGO0122/models"
 )
-
-type Handler struct {
-	DB *gorm.DB
-}
 
 func (h *Handler) GetBooks(in *gin.Context) {
 	books, err := database.GetBooks(h.DB) //h.DB is fully configured and can give the access of book table

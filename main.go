@@ -10,8 +10,8 @@ import (
 
 func init() { //1st
 	database.Setup() //establish the database connection
-	database.Example()
-	database.exam()
+	//database.Example()
+	//database.exam()
 }
 func init() { //2nd
 	fmt.Print(1)
