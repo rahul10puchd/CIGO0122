@@ -1,4 +1,4 @@
-# Golang tutorials for Cipher Schools
+# Golang tutorials for Cipher Schools, [Connect on Slack](https://join.slack.com/t/letusdevelopworkspace/shared_invite/zt-13cmdkzxe-d_FUqnDy9nQAww35rAL7Sw) in [channel](https://letusdevelopworkspace.slack.com/archives/C031W0L5F1A) 
 [Videos](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=1)
 
 
