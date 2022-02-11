@@ -2,7 +2,7 @@
 [Videos](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=1)
 
 
-1. [Hello World, Data Types, Control Flow] 
+1. [Hello World, Data Types, Control Flow](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=1)
 
 2. [Function, Closure, Const, Pointer, Break, Continue](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=1)
 
@@ -24,8 +24,8 @@
 
 11. [Add other endpoints to app, GoRoutine, wait group, deadlock](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=12)
  
-12. [Channel, mutex]
+12. [Channel, mutex](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=18)
 
 13. [Buffer channel, select, range over channel](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=16)
 
-14. [Concurrency Problem, time, Consuming Rest APIs, Open Source Contribution]
+14. [Concurrency Problem, time, Consuming Rest APIs, Open Source Contribution](https://cipherschools.com/videopage?courseid=61eb8f69b03d7322f7718b11&video=19)
